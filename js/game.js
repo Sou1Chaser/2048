@@ -44,6 +44,7 @@ class Game {
                 case 39:
                     this.moveRight();
                     break;
+
             }
         }.bind(this)
     }

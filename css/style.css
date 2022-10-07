@@ -13,24 +13,17 @@ html, body{
     width: 100%;
     background-color: #000;
 }
-.game__field{
-    width: 80vmin;
-    height: 80vmin;
-    background-color: green;
-}
-.game__header{
-    width: 80vmin;
-    height: 20vmin;
-    background-color: #fff;
-}
 
 
 /*******************************************************************/
-.field{
+.game .field{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #fff;
+    width: 80vmin;
+    height: 80vmin;
+    background-color: green;
 
 }
 .field__cell{
@@ -42,13 +35,16 @@ html, body{
     height: 18vmin;
     box-sizing: border-box;
     margin: 1vmin;
-    border: 2px solid green;
+    border: 2px solid #fff;
     border-radius: 2vmin;
 }
 
 /*******************************************************************/
-.header{
+.game .header{
     font-size: 10vmin;
     box-sizing: border-box; 
     border-bottom: 1px solid #000;
+    width: 80vmin;
+    height: 20vmin;
+    background-color: #fff;
 }

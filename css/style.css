@@ -1,50 +1,147 @@
-*{margin: 0;padding: 0;}
-html, body{
-    height: 100%;
-    width: 100%;
+@font-face {
+  font-family: clearSans;
+  src: local("Clear Sans Bold"), url("../fonts/clearsansbold.woff2") format("woff2"), url("../fonts/clearsansbold.woff") format("woff"), local("ClearSans-Bold"), url("../fonts/clearsansbold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4vmin;
+  height: 100%;
+  width: 100%;
+  background-color: #FAF8EF;
+  overflow: hidden;
+}
+
+.game .header {
+  font-size: 7vmin;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60vmin;
+  height: 20vmin;
+  background-color: #fff;
+  color: #776E65;
+  font-family: clearSans;
+  text-transform: uppercase;
+}
+
+.game .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60vmin;
+  height: 60vmin;
+  background-color: #BBADA0;
+  border-radius: 2%;
+}
+
+.game .field .field__cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 6.3vmin;
+  font-family: clearSans;
+  color: #F9F6F2;
+  width: 12vmin;
+  height: 12vmin;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 2%;
+  border-radius: 5%;
+  background-color: #CDC1B4;
+}
+
 /*******************************************************************/
-.game{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
+.game .field .field__cell[data-color="2"] {
+  background-color: #EEE4DA;
+  color: #776E65;
 }
 
-
-/*******************************************************************/
-.game .field{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #fff;
-    width: 80vmin;
-    height: 80vmin;
-    background-color: green;
-
-}
-.field__cell{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10vmin;
-    width: 18vmin;
-    height: 18vmin;
-    box-sizing: border-box;
-    margin: 1vmin;
-    border: 2px solid #fff;
-    border-radius: 2vmin;
+.game .field .field__cell[data-color="4"] {
+  background-color: #EDE0C8;
+  color: #776E65;
 }
 
-/*******************************************************************/
-.game .header{
-    font-size: 10vmin;
-    box-sizing: border-box; 
-    border-bottom: 1px solid #000;
-    width: 80vmin;
-    height: 20vmin;
-    background-color: #fff;
+.game .field .field__cell[data-color="8"] {
+  background-color: #F2B179;
 }
+
+.game .field
+.game .field .field__cell[data-color="32"] {
+  background-color: #F67C5F;
+}
+
+.game .field .field__cell[data-color="2"] {
+  background-color: #EEE4DA;
+  color: #776E65;
+}
+
+.game .field .field__cell[data-color="4"] {
+  background-color: #EDE0C8;
+  color: #776E65;
+}
+
+.game .field .field__cell[data-color="8"] {
+  background-color: #F2B179;
+}
+
+.game .field .field__cell[data-color="16"] {
+  background-color: #F59563;
+}
+
+.game .field .field__cell[data-color="32"] {
+  background-color: #F67C5F;
+}
+
+.game .field .field__cell[data-color="64"] {
+  background-color: #F65E3B;
+}
+
+/*
+#FFD300
+#FFAB00
+#FF9400
+#FF7600
+#FF0700
+#A60400
+*/

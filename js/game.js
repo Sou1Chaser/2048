@@ -10,11 +10,9 @@ class Game {
         let headerElement = createAndAppend({
             className: 'header',
             parentElement: gameFieldElement
-        });
-
+        }, 'header');
         this.rating = 0;
-
-        headerElement.innerHTML = `Rating ${this.rating}`;
+        headerElement.innerHTML = `Score: ${this.rating}`;
 
         let fieldElement = createAndAppend({
             className: 'field',

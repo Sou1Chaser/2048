@@ -7,12 +7,11 @@ class Game {
             parentElement
         });
 
-        let headerElement = createAndAppend({
+        this.headerElement = createAndAppend({
             className: 'header',
             parentElement: gameFieldElement
         }, 'header');
         this.rating = 0;
-        headerElement.innerHTML = `Score: ${this.rating}`;
 
         let fieldElement = createAndAppend({
             className: 'field',
@@ -24,7 +23,7 @@ class Game {
         for (let i = 0; i < size; i++) {
             this.field[i] = []
             for (let k = 0; k < size; k++) {
-                this.field[i][k] = new Cell(fieldElement);
+                this.field[i][k] = new Cell(fieldElement, this);
             }
         }
 
@@ -46,6 +45,18 @@ class Game {
             }
         }.bind(this)
     }
+
+    set rating(value) {
+        this._rating = value;
+        this.headerElement.innerHTML = `Score: ${value}`;
+    }
+    get rating() {
+        return this._rating;
+    }
+
+    addRating(value) {
+        this.rating += value;
+    }
     spawnUnit() {
         let emptyCells = [];
         for (let i = 0; i < this.field.length; i++) {
@@ -61,6 +72,14 @@ class Game {
         } else {
             alert('You lose!')
         }
+    }
+
+    isLastKey(key) {
+        return key == (this.size - 1);
+    }
+
+    isFirstKey(key) {
+        return key == 0;
     }
 
     moveRight() {
@@ -94,12 +113,7 @@ class Game {
             this.spawnUnit();
         }
     }
-    isLastKey(key) {
-        return key == (this.size - 1);
-    }
-    isFirstKey(key) {
-        return key == 0;
-    }
+
     moveLeft() {
         let hasMoved = false;
         for (let i = 0; i < this.size; i++) {

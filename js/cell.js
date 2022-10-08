@@ -1,6 +1,9 @@
 class Cell {
     constructor(fieldElement, game) {
         this.game = game;
+
+        this.fieldElement = fieldElement;
+
         this.element = createAndAppend({
             className: 'field__cell',
             parentElement: fieldElement
@@ -25,6 +28,7 @@ class Cell {
     merge(cell) {
         if (this.value) {
             this.game.addRating(this.value + cell.value);
+            new AnimationMerge(this)
         }
         this.value += cell.value;
         cell.clear();
@@ -37,5 +41,17 @@ class Cell {
     }
     get isEmpty() {
         return this.value == 0;
+    }
+}
+
+
+class AnimationMerge {
+    constructor(cell) {
+        this.element = cell.element;
+        this.element.classList.add('animation__merge');
+
+        setTimeout(function () {
+            this.element.classList.remove('animation__merge')
+        }.bind(this), 100)
     }
 }

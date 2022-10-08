@@ -26,8 +26,7 @@ class Game {
                 this.field[i][k] = new Cell(fieldElement, this);
             }
         }
-
-        window.onkeyup = function (event) {
+        window.addEventListener('keyup', function (event) {
             switch (event.keyCode) {
                 case 38:
                     this.moveUp();
@@ -43,7 +42,7 @@ class Game {
                     break;
 
             }
-        }.bind(this)
+        }.bind(this));
     }
 
     set rating(value) {

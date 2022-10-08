@@ -1,0 +1,6 @@
+@font-face {
+  font-family: clearSans;
+  src: local("Clear Sans Bold"), url("../fonts/clearsansbold.woff2") format("woff2"), url("../fonts/clearsansbold.woff") format("woff"), local("ClearSans-Bold"), url("../fonts/clearsansbold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

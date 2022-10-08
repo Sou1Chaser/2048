@@ -92,7 +92,40 @@
         .field__cell[data-color="64"]{
             background-color: #F65E3B;
             }
-        
+        .field__cell[data-color="128"]{
+            background-color: #ECCF73;
+            font-size: 6vmin;
+        }
+        .field__cell[data-color="256"]{
+            background-color: #EDCC61;
+        }
+        .field__cell[data-color="512"]{
+            background-color: #EDC951;
+        }
+        .field__cell[data-color="1024"]{
+            background-color: #EDC53F;
+        }
+        .field__cell[data-color="2048"]{
+            background-color: #EEC22E;
+        }
+        .field__cell[data-color="4096"]{
+            background-color: #3D3A33;
+        }
+        .field__cell[data-color="8192"]{
+            background-color: #3D3A33;
+        }
+        .field__cell[data-color="16384"]{
+            background-color: #3D3A33;
+        }
+        .field__cell[data-color="32768"]{
+            background-color: #3D3A33;
+        }
+        .field__cell[data-color="65536"]{
+            background-color: #3D3A33;
+        }
+        .field__cell[data-color="131072"]{
+            background-color: #3D3A33;
+        }
     }
 }
 /*
